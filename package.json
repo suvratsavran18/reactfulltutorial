@@ -1,0 +1,28 @@
+{
+  "name": "reactfullcourse",
+  "version": "1.0.0",
+  "description": "learning react from the scratch ",
+  "keywords": [
+    "react",
+    "reactfulltutorial",
+    "reactforfrontend"
+  ],
+  "homepage": "https://github.com/suvratsavran18/reactfulltutorial#readme",
+  "bugs": {
+    "url": "https://github.com/suvratsavran18/reactfulltutorial/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suvratsavran18/reactfulltutorial.git"
+  },
+  "license": "ISC",
+  "author": "Suvrat Savran",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
