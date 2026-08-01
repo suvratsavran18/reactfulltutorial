@@ -1,7 +1,7 @@
 {
   "name": "reactfullcourse",
   "version": "1.0.0",
-  "description": "learning react from the scratch ",
+  "description": "learning react from the scratch",
   "keywords": [
     "react",
     "reactfulltutorial",
@@ -17,12 +17,18 @@
   },
   "license": "ISC",
   "author": "Suvrat Savran",
-  "type": "commonjs",
-  "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "parcel": "^2.16.4"
-  }
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
 }
