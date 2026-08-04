@@ -59,7 +59,75 @@ import ReactDOM from "react-dom/client";
 //     const root = ReactDOM.createRoot(document.getElementById('root'));
 //     root.render(parent);
 
-const jsxheading = <h1>Hello, React! from JSX</h1>;
+// JSX is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript code. 
+// It is commonly used with React to define the structure and appearance of user interfaces in a more readable and declarative way. 
+// JSX allows you to create React elements using a syntax that resembles HTML, making it easier to visualize the component hierarchy and understand the UI structure.
+// if the code is written in a single line then we don't need to use () to wrap the jsx code otherwise it will give error
+// if the code is written in multiple lines then we have to use () to wrap the jsx code otherwise it will give error
+// because babel transpiler will not be able to understand the code and will give error
+// const jsxheading = (<h1  className="head" tabIndex="1" > Hello, React! from JSX </h1>
 
+    // );
+    // if written in more line we have to use () to wrap the jsx code otherwise it will give error
+
+
+    // react functional component is a javascript function which returns jsx code
+    // normal js function which returns jsx code is not a react functional component
+    // react functional component name should start with capital letter otherwise it will give error
+    // react functional component can be written in two ways
+    // 1. normal function
+    // 2. arrow function
+    // here title is normal js variable which is storing jsx code and heading is a react functional component which is returning jsx code
+    const Title = 
+        <div>
+            <h1 className = "head"  tabIndex = "5" > 
+         Hello, React! from JSX 
+            </h1>
+             {/* we can write javascript code inside jsx code using {} */}
+          <h1> 
+            
+            {/* {1000*2} */}
+            </h1>
+             <h1 className = "head"  tabIndex = "5" > 
+         Hello, React! from JSX 
+         </h1>
+
+        </div>
+        const Title1 = () => {
+        <div>
+            <h1 className = "head"  tabIndex = "5" > 
+         Hello, React! from JSX 
+            </h1>
+             {/* we can write javascript code inside jsx code using {} */}
+          <h1> 
+            
+            {/* {1000*2} */}
+            </h1>
+             <h1 className = "head"  tabIndex = "5" > 
+         Hello, React! from JSX 
+         </h1>
+
+        </div>
+        }
+
+        // component composition is the process of combining multiple components to create a new component.
+    
+    const Heading = () => {
+        return (
+            <>
+            {/* we can pass js variable or we can perform any action through js just by using {} */}
+            {Title1()}
+            {Title}
+            {/* <Title /> */}
+            <h1> Hello, React! from JSX functional component </h1>
+            </>
+        );
+       
+
+    };
+    //  const Heading2 = () => <h1> Hello, React! from JSX </h1>;
+
+    //  above two are same but the second one is more concise and readable
+    
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxheading);
+root.render(< Heading />);
