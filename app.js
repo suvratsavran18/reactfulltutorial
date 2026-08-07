@@ -12,6 +12,7 @@
     </div>
     */}
    
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 // from where we are importing react and react-dom is from the node_modules folder which is created when we run npm install react react-dom
@@ -78,56 +79,56 @@ import ReactDOM from "react-dom/client";
     // 1. normal function
     // 2. arrow function
     // here title is normal js variable which is storing jsx code and heading is a react functional component which is returning jsx code
-    const Title = 
-        <div>
-            <h1 className = "head"  tabIndex = "5" > 
-         Hello, React! from JSX 
-            </h1>
-             {/* we can write javascript code inside jsx code using {} */}
-          <h1> 
+//     const Title = 
+//         <div>
+//             <h1 className = "head"  tabIndex = "5" > 
+//          Hello, React! from JSX 
+//             </h1>
+//              {/* we can write javascript code inside jsx code using {} */}
+//           <h1> 
             
-            {/* {1000*2} */}
-            </h1>
-             <h1 className = "head"  tabIndex = "5" > 
-         Hello, React! from JSX 
-         </h1>
+//             {/* {1000*2} */}
+//             </h1>
+//              <h1 className = "head"  tabIndex = "5" > 
+//          Hello, React! from JSX 
+//          </h1>
 
-        </div>
-        const Title1 = () => {
-        <div>
-            <h1 className = "head"  tabIndex = "5" > 
-         Hello, React! from JSX 
-            </h1>
-             {/* we can write javascript code inside jsx code using {} */}
-          <h1> 
+//         </div>
+//         const Title1 = () => {
+//         <div>
+//             <h1 className = "head"  tabIndex = "5" > 
+//          Hello, React! from JSX 
+//             </h1>
+//              {/* we can write javascript code inside jsx code using {} */}
+//           <h1> 
             
-            {/* {1000*2} */}
-            </h1>
-             <h1 className = "head"  tabIndex = "5" > 
-         Hello, React! from JSX 
-         </h1>
+//             {/* {1000*2} */}
+//             </h1>
+//              <h1 className = "head"  tabIndex = "5" > 
+//          Hello, React! from JSX 
+//          </h1>
 
-        </div>
-        }
+//         </div>
+//         }
 
-        // component composition is the process of combining multiple components to create a new component.
+//         // component composition is the process of combining multiple components to create a new component.
     
-    const Heading = () => {
-        return (
-            <>
-            {/* we can pass js variable or we can perform any action through js just by using {} */}
-            {Title1()}
-            {Title}
-            {/* <Title /> */}
-            <h1> Hello, React! from JSX functional component </h1>
-            </>
-        );
+//     const Heading = () => {
+//         return (
+//             <>
+//             {/* we can pass js variable or we can perform any action through js just by using {} */}
+//             {Title1()}
+//             {Title}
+//             {/* <Title /> */}
+//             <h1> Hello, React! from JSX functional component </h1>
+//             </>
+//         );
        
 
-    };
-    //  const Heading2 = () => <h1> Hello, React! from JSX </h1>;
+//     };
+//     //  const Heading2 = () => <h1> Hello, React! from JSX </h1>;
 
-    //  above two are same but the second one is more concise and readable
+//     //  above two are same but the second one is more concise and readable
     
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(< Heading />);
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(< Heading />);
