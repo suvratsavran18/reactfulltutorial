@@ -1,45 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import RestaurantCard from "./RestaurantCard";
+import resList from "../utils/mockData";
+import { useState } from "react";
 
-/** 
- * Header
- * -Logo
- * -Nav Items
- * 
- * Body
- * -Search bar
- * -Restaurant list
- * 
- * Footer
- * -Links
- * -Copyright
- * -Address
- * -Contacts
- * 
-*/
 
-const Header = () =>{
-    return(
-    <div className="header">
-         <div className="logocontainer">
-            <img className ="logo" src="https://www.logodesign.net/logo-new/burger-with-fries-on-side-7182ld.png?nwm=1&nws=1&industry=burger-fries&txt_keyword=All" alt="logo" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-    </div>
-    )
-}
 
-  const resList = [
-  {
-    info: {
-      id: "234875",
+
+
+
+const Body = () =>{
+
+    const [ListofRestaurants] = useState([
+        {
+            info : {
+            id: "234875",
       name: "Adil Hotel",
       cloudinaryImageId: "y0oufs8f1a1xula0ozqa",
       locality: "Rautha Wada",
@@ -47,13 +20,10 @@ const Header = () =>{
       costForTwo: "₹150 for two",
       cuisines: ["North Indian", "Biryani", "Tandoor"],
       avgRating: 4.3,
-      sla: {
+     
         deliveryTime: 37
-      }
-    }
-  },
-
-  {
+            },
+            
     info: {
       id: "151515",
       name: "Gupta Bhojnalay",
@@ -63,13 +33,13 @@ const Header = () =>{
       costForTwo: "₹200 for two",
       cuisines: ["Fast Food", "Indian", "Beverages"],
       avgRating: 4.8,
-      sla: {
+      
         deliveryTime: 41
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "611642",
       name: "Biriyani Hut",
@@ -79,13 +49,13 @@ const Header = () =>{
       costForTwo: "₹250 for two",
       cuisines: ["Biryani", "Chinese", "Beverages"],
       avgRating: 4.3,
-      sla: {
-        deliveryTime: 27
-      }
-    }
+      deliveryTime: 27
+       
+      
+    
   },
 
-  {
+  
     info: {
       id: "1003414",
       name: "Pizza Hut",
@@ -96,13 +66,13 @@ const Header = () =>{
       costForTwo: "₹350 for two",
       cuisines: ["Pizzas"],
       avgRating: 4.3,
-      sla: {
+      
         deliveryTime: 50
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "630193",
       name: "Champaran Handi Restaurant",
@@ -112,13 +82,13 @@ const Header = () =>{
       costForTwo: "₹200 for two",
       cuisines: ["North Indian"],
       avgRating: 4.3,
-      sla: {
+      
         deliveryTime: 43
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "618037",
       name: "Jai Ganesh Bhojnalaya",
@@ -133,13 +103,13 @@ const Header = () =>{
         "Chinese"
       ],
       avgRating: 4.1,
-      sla: {
+    
         deliveryTime: 42
-      }
-    }
+     
+    
   },
 
-  {
+  
     info: {
       id: "151648",
       name: "Mr. Gurung Momo & Chinese Corner",
@@ -149,13 +119,13 @@ const Header = () =>{
       costForTwo: "₹150 for two",
       cuisines: ["Momos", "Chinese", "Fast Food"],
       avgRating: 4.3,
-      sla: {
+      
         deliveryTime: 42
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "615927",
       name: "Roof 5",
@@ -165,13 +135,13 @@ const Header = () =>{
       costForTwo: "₹200 for two",
       cuisines: ["Indian"],
       avgRating: 4.2,
-      sla: {
+      
         deliveryTime: 54
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "184424",
       name: "Sab Ghar Tak Foods",
@@ -188,13 +158,13 @@ const Header = () =>{
         "Desserts"
       ],
       avgRating: 4.1,
-      sla: {
+     
         deliveryTime: 46
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "658210",
       name: "The Fusion Lounge",
@@ -210,13 +180,13 @@ const Header = () =>{
         "Desserts"
       ],
       avgRating: 4.2,
-      sla: {
+      
         deliveryTime: 45
-      }
-    }
+      
+    
   },
 
-  {
+  
     info: {
       id: "150591",
       name: "Satkar Restaurant",
@@ -232,13 +202,13 @@ const Header = () =>{
         "Desserts"
       ],
       avgRating: 4.4,
-      sla: {
+      
         deliveryTime: 44
-      }
-    }
-  },
+      
+    },
+  
 
-  {
+  
     info: {
       id: "385824",
       name: "The Belgian Waffle Co.",
@@ -254,62 +224,36 @@ const Header = () =>{
         "Beverages"
       ],
       avgRating: 4.7,
-      sla: {
+     
         deliveryTime: 50
-      }
+      
     }
-  }
-];
+  
+    },
+       
+  
 
-
-
-const RestaurantCard = (props) => {
-    const {resData} = props;
-    const{cloudinaryImageId, name, cuisines, avgRating, deliveryTime, costForTwo } = resData?.info;
-    return(
-        <div className="res-card">
-            <img 
-            className="restaurant-image" 
-            src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + 
-                cloudinaryImageId}
-
-             alt="restaurant" />
-            <h3><a href="#">{name}</a></h3>
-            <h4><b>{cuisines.join(", ")}</b></h4>
-            <h4>{avgRating}</h4>
-            <h4>{deliveryTime} minutes</h4>
-            <h4>{costForTwo}</h4>
-        </div>
-    )
-}
-// they both are same but the first one is more readable and the second one is more concise
-// these are two ways to pass props to a component
-// that is, we can pass props to a component either by using props object or by destructuring the props object
-// that's how we make dynamic components in react and we can reuse them as many times as we want with different data
-// const RestaurantCard = (name, cuisines, rating, deliveryTime) =>{
-//     return(
-//         <div className="res-card">
-//             <img className="restaurant-image" src="https://as2.ftcdn.net/v2/jpg/12/82/94/69/1000_F_1282946907_d9RZ8uGDYgQfKoZY8fyqt6zPdlQMgmAe.jpg"
-//              alt="restaurant" />
-//             <h3>{name}</h3>
-//             <h4><b>{cuisines.join(", ")}</b></h4>
-//             <h4>{rating}</h4>
-//             <h4>{deliveryTime} minutes</h4>
-//         </div>
-//     )
-// }
-
-const Body = () =>{
+ 
+   ]);
     return(
         <div className="body">
             <div className="search">
                 <input type="text" placeholder="Search for restaurants" />
                 <button>Search</button>
             </div>
+            <div className="filter-btn" onClick ={() => {
+                const filteredList = ListofRestaurants.filter(
+                    (res) => res.info.avgRating > 4.0
+                );
+                setListofRestaurants(filteredList);
+            }}>
+                Top Rated Restaurants
+            </div>  
+                
             <div className="restaurant-list">
 
-              {resList.map((restaurant) => (
-                <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+              {ListofRestaurants.map((restaurant) => (
+                <RestaurantCard key={restaurant.info.id} ListofRestaurants={restaurant} />
               ))}
 
                 {/* <RestaurantCard resData={resList[2]} />
@@ -333,37 +277,4 @@ const Body = () =>{
         </div>
     )
 }
-
-
-
-
-const AppLayout = () => {
-    return (
-        
-        <div className="applayout">   
-       <Header />
-       <Body />
-       
-        
-        
-        </div>
-       
-
-    )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default Body;

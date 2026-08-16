@@ -15,6 +15,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./Components/Header";
 // from where we are importing react and react-dom is from the node_modules folder which is created when we run npm install react react-dom
 
 //    const parent = React.createElement(

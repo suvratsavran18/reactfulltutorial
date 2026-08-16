@@ -20,3 +20,33 @@
 - HTTPs
 - different dev and prod builds
 - differential bundling - supports older browser (type ="nomodule")
+
+
+First Project :-
+/** 
+ * Header
+ * -Logo
+ * -Nav Items
+ * 
+ * Body
+ * -Search bar
+ * -Restaurant list
+ * 
+ * Footer
+ * -Links
+ * -Copyright
+ * -Address
+ * -Contacts
+ * 
+*/
+
+
+- Two type of export/import :-
+
+ * default export import 
+  - export default <variable-name> or component
+  - import <variable-name> or component from "path".
+
+ * named  export import
+  - export const name
+  -import{component} from "path".
