@@ -1,9 +1,10 @@
 import { CDN_URL } from "../utils/contants"; // named import
-// import  CDN_URL  from "../utils/contants"; //
+// import  CDN_URL  from "../utils/contants"; // default import
+
 
 const RestaurantCard = (props) => {
-    const {resData} = props;
-    const{cloudinaryImageId, name, cuisines, avgRating, deliveryTime, costForTwo } = resData?.info;
+     const {resList} = props;
+    const{cloudinaryImageId, name, cuisines, avgRating, deliveryTime, costForTwo } = resList?.info;
     return(
         <div className="res-card">
             <img 

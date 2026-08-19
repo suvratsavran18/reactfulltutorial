@@ -222,4 +222,7 @@ const resList = [
     }
   }
 ];
+console.log("mockData resList is array:", Array.isArray(resList));
+console.log("mockData resList:", resList);
+
  export default resList;
